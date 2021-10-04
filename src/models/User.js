@@ -17,16 +17,4 @@ const UserSchema = new Schema({
     timestamps: true
 });
 
-
-//----------------Encriptado de contraseña----------------
-// UserSchema.methods.encrypPass = async password => {
-//     const salt = await bcrypt.genSalt(10);
-//     return await bcrypt.hash(password, salt);
-// };
-
-//-----Comparación de cifrado de contraseñas: Devuelve boolean----------------
-// UserSchema.methods.matchPass = function(password){
-//     return await bcrypt.compare(password, this.password)
-// }
-
-module.exports = model('User', UserSChema)
+module.exports = model('User', UserSchema)

@@ -17,7 +17,7 @@ app.use(express.urlencoded({extended:false}));
 
 
 //TODO----------------Routes--------------------------
-app.use('/alumnos', require('./routes/user.routes'));
+app.use('/api', require('./routes/user.routes'));
 app.use('/login', require('./routes/login.routes'))
 
 //TODO----------------Settings----------------------

@@ -47,7 +47,7 @@ const modifyUser = async(req, res) => {
 
 const deleteUser = async(req, res) => {
     try {
-        await users.findByIdAndUpdate(req.params.id, { estado: false })
+        await users.findByIdAndUpdate(req.body.id, { estado: false })
         res.status(203).json('El usuario ha sido eliminado')
     } catch (err) {
         res.status(403).json(err)

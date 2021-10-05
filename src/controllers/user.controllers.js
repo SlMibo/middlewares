@@ -25,8 +25,9 @@ const addUser = async(req, res) => {
     try {
         const { email, password, role } = req.body
         const encrypPass = await bcrypt.hash(password, 10)
-        const newUser = new users({email, password: encrypPass})
-        await newUser.save()
+        const newUser = new users({email, password: encrypPass, role})
+        console.log(newUser)
+        newUser.save()
         res.status(201).json('Se ha registrado con éxito')
     } catch (err) {
         res.status(401).json(err)

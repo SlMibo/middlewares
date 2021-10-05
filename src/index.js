@@ -14,13 +14,11 @@ app.use(express.json());
 app.use(morgan('dev'));
 //-------Urlencoded: Para validar distintos tipos de formularios--------------
 app.use(express.urlencoded({extended:false}));
-//-----
-app.use(cors())
 
 
 //TODO----------------Routes--------------------------
 app.use('/alumnos', require('./routes/user.routes'));
-
+app.use('/login', require('./routes/login.routes'))
 
 //TODO----------------Settings----------------------
 //-----------Se obtiene el puerto o por defecto se usa el 4000------------
